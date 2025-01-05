@@ -283,9 +283,7 @@
  oma = c(0,0,0,0),
  mar = c(5.1,4.1,4.1,2.1))  
  }
- 
- # path<-"I:/Dat/38AIALL/Projects/All/Global/Regulatory PD/2.Scripts/1.CC/Development"
- # source(paste0(path,"/functions/test-ucm.ecb.r"),local=TRUE)
+
  
  # Return the data
  data <- ts.union(y, trend, cycle, error)
