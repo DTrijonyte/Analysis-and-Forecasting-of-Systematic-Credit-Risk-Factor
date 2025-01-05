@@ -62,7 +62,6 @@ lpha$", "$\\sigma^2$", "$T$, years"),
  eps_irr_sd_2 = temp_res$params[1,5])
  matrix(c(temp_res$params), nrow = 2)[1,] -> params
  
- Psimulate.cts(print_out)
  # Simulate all 10000 time series
  1:nsim %>% lapply(function(x)simulate.cts(n = 710, plot = FALSE, seed = NULL,
  rho = temp_res$params[1,1],
@@ -73,18 +72,6 @@ lpha$", "$\\sigma^2$", "$T$, years"),
  
  
  
- 
- 
- # # Skewness and kurtosis
- # sim_cycle %>% lapply(function(x)JarqueBera.test(x)[[2]]$statistic) %>% unlist() -> skewness
- # mean(skewness)
- # sim_cycle %>% lapply(function(x)JarqueBera.test(x)[[3]]$statistic) %>% unlist() -> kurtosis
- # (excess_kurtosis <- mean(kurtosis) - 3)
- # 
- # # For actual time series
- # sim_cycle <- y
- # p_values <- lapply(all_tests, function(test) sapply(sim_cycle, function(x) test(x)))
- # p_values
  
  
  # Define the test functions for stationarity and normality
